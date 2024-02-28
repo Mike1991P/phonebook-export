@@ -21,7 +21,7 @@ def choose_action(phonebook):
         elif user_choice == '7':
                 source_file = 'phonebook.txt'
                 target_file = 'newpb.txt'
-                line_number = int(input('Введите номер строки: '))
+                line_number = int(input('Введите порядковый номер строки из файла справочника: '))
                 copy_line(source_file, target_file, line_number)
                 
         elif user_choice == '0':
@@ -175,7 +175,7 @@ def copy_line(source_file, target_file, line_number):
     with open(target_file, 'w') as file:
         file.write(lines[line_number - 1])
     
-    print('Копирование строки успешно выполнено')
+    print('Копирование контакта успешно выполнено')
     source_file = 'phonebook.txt'
     target_file = 'newpb.txt'
 
